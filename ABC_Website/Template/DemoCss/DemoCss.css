@@ -1,0 +1,139 @@
+ .carousel-inner img {
+      width: 100%;
+      height: 100%;
+  }
+.dropdown:hover>.dropdown-menu {
+  display: block;  
+}
+.nav-item i {
+	font-size: 30px;
+	color: black;
+}
+.navbar-brand img {
+	width: 100px;
+	height: 60px;
+}
+.navbar-brand span {
+	color: black;
+}
+.login-menu {
+	left: -60%;
+	top: 95%;
+}
+.contact-menu a {
+	display: inline;
+	padding: 5px;
+}
+.contact-menu i {
+	font-size: 20px;
+}
+.contact-menu {
+	padding-left: 13px;
+	left: -50%;
+	top: 95%;
+}
+#body-navbar a {
+	color: black;
+}
+#body-navbar {
+	border-bottom: 1px solid;
+	background-color: white;
+}
+#collapsenavbar {
+	margin-top: 5px;
+	margin-bottom: -10px;
+	margin-left: -15px;
+	margin-right: -15px;
+	border-top: 2px solid;
+	background-color: #303030;
+}
+#collapsenavbar a {
+	text-align: center;
+}
+#mobile-navbar {
+	
+}
+#mobile-navbar img {
+	width: 100px;
+	height: 80px;
+	margin-top: -20px;
+	margin-bottom: -20px;
+}
+#laptop-collapse {
+	background-color: #343A40;
+}
+#component-collapse {
+	background-color: #343A40;
+}
+#gear-collapse {
+	background-color: #343A40;
+}
+#software-collapse {
+	background-color: #343A40;
+}
+#login-collapse {
+	background-color: #343A40;
+}
+#contact-collapse {
+	background-color: #343A40;
+}
+#contact-collapse i {
+	color: #A0A0A0;
+	font-size: 20px;
+}
+#body-navbar .dropdown-menu {
+	top: 95%;
+}
+.card {
+	width: 256px;
+	min-height: 256px;
+}
+.card-holder {
+	justify-content: center;
+	align-content: space-between;
+}
+.card img {
+	width: 100%;
+	height: 256px;
+}
+.card-body {
+	text-align: center;
+}
+.dropdown-menu a:hover {
+	background-color: lightgrey;
+}
+.dropdown-menu a {
+	transition: all .5s ease-out;
+}
+.form-inline button:hover {
+	background-color: grey;
+	border-color: grey;
+}
+.form-inline button {
+	transition: all .5s ease-out;
+}
+.navbar-brand span:hover {
+	color: grey;
+}
+.navbar-brand span {
+	transition: all .5s ease-out;
+}
+#top-right-menu li{
+	 padding-bottom: 15px;
+	 transition: all .5s ease-out;
+}
+#top-right-menu .login-menu a{
+	margin-top: 0px; 
+}
+#top-right-menu a{
+	margin-top: 15px;
+}
+#top-right-menu li:hover{
+	 background-color: lightgrey;
+}
+#body-navbar li:hover {
+	background-color: lightgrey;
+}
+#body-navbar li{
+	 transition: all .5s ease-out;
+}

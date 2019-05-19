@@ -1,0 +1,433 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="ABC_Website.MasterPage" %>
+
+<%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="uc1" %>
+<%@ Register Src="UserControls/Home.ascx" TagName="Home" TagPrefix="uc2" %>
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+<head>
+    <title>ABC Shop</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Template/Bootstrap4/bootstrap.min.css">
+    <link rel="stylesheet" href="Template/DemoCss/DemoCss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="Template/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!--MOBILE NAVBAR-->
+    <div class="d-block d-md-none py-0">
+        <nav class="navbar bg-dark navbar-dark" id="mobile-navbar">
+            <a href="#" class="navbar-brand">
+                <img src="Template/Images/rog-logo-2.png">
+            </a>
+            <button class="navbar-toggler border border-0" type="button" data-toggle="collapse" data-target="#collapsenavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsenavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#laptop-collapse" class="nav-link" data-toggle="collapse">Laptop</a>
+                        <div id="laptop-collapse" class="collapse" data-parent="#collapsenavbar">
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a href="#" class="nav-link">Acer</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Apple</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Asus</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Dell</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Gigabyte</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">HP</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Lenovo</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Microsoft</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">MSI</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Razer</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#component-collapse" class="nav-link" data-toggle="collapse">Component</a>
+                        <div id="component-collapse" class="collapse" data-parent="#collapsenavbar">
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a href="#" class="nav-link">Ram</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">SSD</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#gear-collapse" class="nav-link" data-toggle="collapse">Gear</a>
+                        <div id="gear-collapse" class="collapse" data-parent="#collapsenavbar">
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a href="#" class="nav-link">Keyboard</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Mouse</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Sound</a></li>
+                                <p></p>
+                                <li class="nav-item"><a href="#" class="nav-link">Accessories</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#software-collapse" class="nav-link" data-toggle="collapse">Software</a>
+                        <div id="software-collapse" class="collapse" data-parent="#collapsenavbar">
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a href="#" class="nav-link">Windows</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Office</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Security</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Games</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#login-collapse" class="nav-link" data-toggle="collapse">Login</a>
+                        <div id="login-collapse" class="collapse" data-parent="#collapsenavbar">
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a href="#" class="nav-link">Administrator</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Customer</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact-collapse" class="nav-link" data-toggle="collapse">Contact</a>
+                        <div id="contact-collapse" class="collapse" data-parent="#collapsenavbar">
+                            <ul class="nav">
+                                <li class="nav-item col-3"><a href="#" class="nav-link"><i class="fa fa-facebook-square"></i></a></li>
+                                <li class="nav-item col-3"><a href="#" class="nav-link"><i class="fa fa-envelope"></i></a></li>
+                                <li class="nav-item col-3"><a href="#" class="nav-link"><i class="fa fa-youtube-play"></i></a></li>
+                                <li class="nav-item col-3"><a href="#" class="nav-link"><i class="fa fa-users"></i></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!--HEADER-->
+    <div class="HEADER">
+        <!--TOP HEADER-->
+        <div class="d-none d-md-block">
+            <div class="d-flex justify-content-between">
+                <div class="align-self-center">
+                    <a href="/Home.aspx" class="navbar-brand">
+                        <span class="d-none d-lg-block mt-1 ml-3">
+                            <h2><strong>ABC Shop</strong></h2>
+                        </span>
+                        <img class="d-block d-lg-none" src="Template/Images/rog-logo-black.png">
+                    </a>
+                </div>
+                <div class="align-self-center">
+                    <div class="form-inline">
+                        <button class="btn btn-dark mr-1 d-none d-lg-block" type="button">Search</button>
+                        <input class="form-control" type="text" placeholder="Search...">
+                        <button class="btn btn-dark ml-1 d-block d-lg-none"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+                <div class="" id="top-right-menu">
+                    <ul class="nav">
+                        <li class="nav-item dropdown d-none d-lg-block">
+                            <a href="#" class="nav-link text-dark">Login</a>
+                            <div class="login-menu dropdown-menu">
+                                <a href="#" class="dropdown-item">Administrator</a>
+                                <a href="#" class="dropdown-item">Customer</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown d-block d-lg-none">
+                            <a href="#" class="nav-link">
+                                <i class="fa fa-user"></i>
+                            </a>
+                            <div class="login-menu dropdown-menu">
+                                <a href="#" class="dropdown-item">Administrator</a>
+                                <a href="#" class="dropdown-item">Customer</a>
+                            </div>
+                        </li>
+                        <li class="nav-item d-none d-lg-block">
+                            <a href="#" class="nav-link text-dark">News</a>
+                        </li>
+                        <li class="nav-item d-block d-lg-none">
+                            <a href="#" class="nav-link">
+                                <i class="fa fa-newspaper-o"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown d-none d-lg-block">
+                            <a href="#" class="nav-link text-dark">Contact</a>
+                            <div class="contact-menu dropdown-menu">
+                                <a href="#" class="dropdown-item"><i class="fa fa-facebook-square"></i></a>
+                                <a href="#" class="dropdown-item"><i class="fa fa fa-envelope"></i></a>
+                                <a href="#" class="dropdown-item"><i class="fa fa-youtube-play"></i></a>
+                                <a href="#" class="dropdown-item"><i class="fa fa-users"></i></a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown d-block d-lg-none">
+                            <a href="#" class="nav-link">
+                                <i class="fa fa-handshake-o"></i>
+                            </a>
+                            <div class="contact-menu dropdown-menu">
+                                <a href="#" class="dropdown-item"><i class="fa fa-facebook-square"></i></a>
+                                <a href="#" class="dropdown-item"><i class="fa fa fa-envelope"></i></a>
+                                <a href="#" class="dropdown-item"><i class="fa fa-youtube-play"></i></a>
+                                <a href="#" class="dropdown-item"><i class="fa fa-users"></i></a>
+                            </div>
+                        </li>
+                        <li class="nav-item d-none d-lg-block">
+                            <a href="#" class="nav-link text-dark">Cart</a>
+                        </li>
+                        <li class="nav-item d-block d-lg-none">
+                            <a href="#" class="nav-link">
+                                <i class="fa fa-shopping-cart"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--MID HEADER-->
+        <div id="demo" class="carousel slide" data-ride="carousel">
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+                <li data-target="#demo" data-slide-to="3"></li>
+            </ul>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="Template/Images/acer.jpg">
+                </div>
+                <div class="carousel-item">
+                    <img src="Template/Images/aorus.jpg">
+                </div>
+                <div class="carousel-item">
+                    <img src="Template/Images/asus.jpg">
+                </div>
+                <div class="carousel-item">
+                    <img src="Template/Images/msi.jpg">
+                </div>
+            </div>
+            <a href="#demo" class="carousel-control-prev" data-slide="prev"><span class="carousel-control-prev-icon"></span></a>
+            <a href="#demo" class="carousel-control-next" data-slide="next"><span class="carousel-control-next-icon"></span></a>
+        </div>
+    </div>
+    <!--BODY-->
+    <div class="BODY border border-secondary">
+        <!--TOP NAVBAR-->
+        <%--<div class="d-none d-md-block sticky-top">
+            <div class="d-flex justify-content-center" id="body-navbar">
+                <ul class="nav">
+                    <li class="nav-item dropdown d-none d-lg-block">
+                        <a href="#" class="nav-link">Laptop</a>
+                        <div class="dropdown-menu laptop-menu">
+                            <ul class="list-unstyled laptop-menu">
+                                <li><a href="#" class="dropdown-item">Acer</a></li>
+                                <li><a href="#" class="dropdown-item">Apple</a></li>
+                                <li><a href="#" class="dropdown-item">Asus</a></li>
+                                <li><a href="#" class="dropdown-item">Dell</a></li>
+                                <li><a href="#" class="dropdown-item">Gigabyte</a></li>
+                            </ul>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="dropdown-item">HP</a></li>
+                                <li><a href="#" class="dropdown-item">Lenovo</a></li>
+                                <li><a href="#" class="dropdown-item">Microsoft</a></li>
+                                <li><a href="#" class="dropdown-item">MSI</a></li>
+                                <li><a href="#" class="dropdown-item">Razer</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown d-block d-lg-none">
+                        <a href="#" class="nav-link"><i class="fa fa-laptop"></i></a>
+                        <div class="dropdown-menu">
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="dropdown-item">Acer</a></li>
+                                <li><a href="#" class="dropdown-item">Apple</a></li>
+                                <li><a href="#" class="dropdown-item">Asus</a></li>
+                                <li><a href="#" class="dropdown-item">Dell</a></li>
+                                <li><a href="#" class="dropdown-item">Gigabyte</a></li>
+                            </ul>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="dropdown-item">HP</a></li>
+                                <li><a href="#" class="dropdown-item">Lenovo</a></li>
+                                <li><a href="#" class="dropdown-item">Microsoft</a></li>
+                                <li><a href="#" class="dropdown-item">MSI</a></li>
+                                <li><a href="#" class="dropdown-item">Razer</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown d-none d-lg-block">
+                        <a href="#" class="nav-link">Component</a>
+                        <div class="dropdown-menu">
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="dropdown-item">Ram</a></li>
+                                <li><a href="#" class="dropdown-item">SSD</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown d-block d-lg-none">
+                        <a href="#" class="nav-link"><i class="fa fa-hdd-o"></i></a>
+                        <div class="dropdown-menu">
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="dropdown-item">Ram</a></li>
+                                <li><a href="#" class="dropdown-item">SSD</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown d-none d-lg-block">
+                        <a href="#" class="nav-link">Gear</a>
+                        <div class="dropdown-menu">
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="dropdown-item">Keyboard</a></li>
+                                <li><a href="#" class="dropdown-item">Mouse</a></li>
+                                <li><a href="#" class="dropdown-item">Sound</a></li>
+                                <li><a href="#" class="dropdown-item">Accessories</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown d-block d-lg-none">
+                        <a href="#" class="nav-link"><i class="fa fa-gamepad"></i></a>
+                        <div class="dropdown-menu">
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="dropdown-item">Keyboard</a></li>
+                                <li><a href="#" class="dropdown-item">Mouse</a></li>
+                                <li><a href="#" class="dropdown-item">Sound</a></li>
+                                <li><a href="#" class="dropdown-item">Accessories</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown d-none d-lg-block">
+                        <a href="#" class="nav-link">Software</a>
+                        <div class="dropdown-menu">
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="dropdown-item">Windows</a></li>
+                                <li><a href="#" class="dropdown-item">Office</a></li>
+                                <li><a href="#" class="dropdown-item">Security</a></li>
+                                <li><a href="#" class="dropdown-item">Games</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown d-block d-lg-none">
+                        <a href="#" class="nav-link"><i class="fa fa-windows"></i></a>
+                        <div class="dropdown-menu">
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="dropdown-item">Windows</a></li>
+                                <li><a href="#" class="dropdown-item">Office</a></li>
+                                <li><a href="#" class="dropdown-item">Security</a></li>
+                                <li><a href="#" class="dropdown-item">Games</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>--%>
+        <!--MAIN-->
+        <form id="form1" runat="server" style="width: 1349px">
+            <div class="BODY mb-1 mt-1">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!--LEFT-->
+                        <div class="col-lg-2 col-md-12 border border-dark bg-dark">
+                            <%--<a href="#category" aria-expanded="false" data-toggle="collapse" class="nav-link" style="text-align: center; color: white">
+                                <strong>Category</strong>
+                            </a>
+                            <div id="category" class="collapse" style="margin-left: -8%; margin-right: -8%; background-color: gray">
+                                <asp:GridView ID="gvwMenu" runat="server" AutoGenerateColumns="False" Width="100%" CssClass="text-center" BorderStyle="None" GridLines="None" ShowHeader="False">
+                                    <Columns>
+                                        <asp:HyperLinkField DataTextField="Name" NavigateUrl="#" ControlStyle-ForeColor="White">
+<ControlStyle ForeColor="White"></ControlStyle>
+                                        </asp:HyperLinkField>
+                                    </Columns>
+                                </asp:GridView>
+                            </div>--%>
+                            <div class="management-menu">
+                                <asp:Table ID="Table1" runat="server" Width="100%" Visible="false">
+                                    <asp:TableRow runat="server">
+                                        <asp:TableCell runat="server">
+                                            <a href="#menu" aria-expanded="false" data-toggle="collapse" class="nav-link" style="text-align: center; color: white">
+                                            <strong>Management</strong>
+                                        </a>
+                                        <ul id="menu" class="collapse list-unstyled" style="margin-left:-8%; margin-right:-8%;background-color:gray">
+                                            <li style="text-align: center"><a href="/CategoryManagement.aspx" style="color:white">Category</a></li>
+                                            <li style="text-align: center"><a href="/ProductManagement.aspx" style="color:white">Product</a></li>
+                                            <li style="text-align: center"><a href="/OrderManagement.aspx" style="color:white">Order</a></li>
+                                        </ul>
+                                        </asp:TableCell>
+                                    </asp:TableRow>
+                                </asp:Table>
+                            </div>
+                            <div class="filter-menu">
+                                <a href="#filter" aria-expanded="false" data-toggle="collapse" class="nav-link" style="text-align: center; color: white">
+                                    <strong>Filter by price</strong>
+                                </a>
+                                <div id="filter" class="collapse show pt-2 pb-2 pl-1" style="margin-left:-8%; margin-right:-8%;background-color:gray">
+                                    <asp:DropDownList ID="DropDownList1" runat="server" Width="100%">
+                                        <asp:ListItem Value="1">Under 500$</asp:ListItem>
+                                        <asp:ListItem Value="2">500$ - 1.000$</asp:ListItem>
+                                        <asp:ListItem Value="3">1.000$ - 1.500$</asp:ListItem>
+                                        <asp:ListItem Value="4">1.500$ - 2.000$</asp:ListItem>
+                                    </asp:DropDownList>
+                                    <br />
+                                    <br />
+                                    <asp:Button ID="btnSearch" runat="server" Text="Filter" CssClass="btn btn-primary" CausesValidation="false" OnClick="btnSearch_Click" />
+                                    <a href="Home.aspx" class="btn btn-primary" style="color:white">Refresh</a>
+                                </div>
+                            </div>
+                            <div class="filter-menu">
+                                <a href="#filter2" aria-expanded="false" data-toggle="collapse" class="nav-link" style="text-align: center; color: white">
+                                    <strong>Filter by category</strong>
+                                </a>
+                                <div id="filter2" class="collapse show pt-2 pb-2 pl-1" style="margin-left:-8%; margin-right:-8%;background-color:gray">
+                                    <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource1" DataTextField="Name" DataValueField="ID" Width="100%">
+                                    </asp:DropDownList>
+                                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:myConStrDB %>" SelectCommand="SELECT * FROM [Category]"></asp:SqlDataSource>
+                                    <br />
+                                    <br />
+                                    <asp:Button ID="btnFilter" runat="server" Text="Filter" CssClass="btn btn-primary" CausesValidation="false" />
+                                    <a href="Home.aspx" class="btn btn-primary" style="color:white">Refresh</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--MID-->
+                        <div class="col-lg-8 col-md-12">
+                            <div>
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </div>
+                        </div>
+                        <!--RIGHT-->
+                        <div class="col-lg-2 col-md-12 border border-dark bg-dark p-2">
+                            <strong>
+                                <asp:Label ID="lblWelcome" runat="server" ForeColor="White">Welcome to ABC Shop!</asp:Label></strong>
+                            <br />
+                            <br />
+                            <button id="btnLoginn" type="button" class="btn btn-primary" data-toggle="collapse" data-target="#login">Account</button>
+                            <a href="ShopCart.aspx" class="btn btn-primary">Cart (<%= Session["quantity"] %>)</a>
+                            <div id="login" class="collapse">
+                                <div class="form-group">
+                                    <asp:Label ID="lblUsername" runat="server" Text="Username: " ForeColor="White"></asp:Label>
+                                    <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control"></asp:TextBox>
+                                </div>
+                                <asp:RequiredFieldValidator runat="server" ControlToValidate="txtUsername" ErrorMessage="Username is required!" ForeColor="Red"></asp:RequiredFieldValidator>
+                                <div class="form-group">
+                                    <asp:Label ID="lblPassword" runat="server" Text="Password: " ForeColor="White"></asp:Label>
+                                    <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
+                                </div>
+                                <asp:RequiredFieldValidator runat="server" ControlToValidate="txtPassword" ErrorMessage="Password is required!" ForeColor="Red"></asp:RequiredFieldValidator>
+                                <asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="btn btn-success" OnClick="btnLogin_Click" />
+                                <asp:Button ID="btnLogout" runat="server" Text="Logout" CssClass="btn btn-danger" Visible="false" OnClick="btnLogout_Click" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!--FOOTER-->
+    <div class="FOOTER container-fluid border border-info bg-dark">
+        <div class="container-fluid">
+            <div class="d-flex justify-content-center" style="height: 200px">
+                <label class="align-self-center" style="color: white">CopyRight &copy; ABC Shop</label>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
